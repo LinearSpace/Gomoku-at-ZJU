@@ -1,0 +1,2 @@
+# Gomoku-at-ZJU
+Gomoku, aka Gobang is a very popular board game all over the world. Gomoku at ZJU(求是五子棋) Is the second small project I did in my freshman year(with C# .net 5.0 Framework).  Although my programming is not particularly good, this project has brought me a lot of gains, especially in the knowledge system of object-oriented programming. In addition, since the materials in the game are not original, this game cannot be used for commercial use. Thanks! 
