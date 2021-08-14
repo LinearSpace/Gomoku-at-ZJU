@@ -1,0 +1,85 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>求是五子棋___Gomoku_at_ZJU</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+    <SignAssembly>false</SignAssembly>
+    <ApplicationIcon>Gomoku.ico</ApplicationIcon>
+    <Win32Resource />
+    <AssemblyVersion>1.0.0.5</AssemblyVersion>
+    <FileVersion>1.0.0.5</FileVersion>
+    <PackageId>Gomoku.at.ZJU</PackageId>
+    <Authors>王治智</Authors>
+    <Company>浙江大学 - Zhejiang University</Company>
+    <Product>求是五子棋 - Gomoku at ZJU</Product>
+    <AssemblyName>Gomoku at ZJU</AssemblyName>
+    <Copyright>浙江大学《课程综合实践》求是五子棋设计小组2021©版权所有</Copyright>
+    <PackageIcon>Gomoku.png</PackageIcon>
+    <PackageIconUrl />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>Binaries\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>Binaries\</OutputPath>
+    <NoWarn>1701;1702</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Binaries\net5.0-windows\Font\**" />
+    <Compile Remove="Binaries\net5.0-windows\Resources\**" />
+    <Compile Remove="Binaries\net5.0-windows\Sources\**" />
+    <Compile Remove="Binaries\Sources\**" />
+    <EmbeddedResource Remove="Binaries\net5.0-windows\Font\**" />
+    <EmbeddedResource Remove="Binaries\net5.0-windows\Resources\**" />
+    <EmbeddedResource Remove="Binaries\net5.0-windows\Sources\**" />
+    <EmbeddedResource Remove="Binaries\Sources\**" />
+    <None Remove="Binaries\net5.0-windows\Font\**" />
+    <None Remove="Binaries\net5.0-windows\Resources\**" />
+    <None Remove="Binaries\net5.0-windows\Sources\**" />
+    <None Remove="Binaries\Sources\**" />
+    <Content Include="Binaries\net5.0-windows\Data\Sound\ChessDrop.wav" />
+    <Content Include="Binaries\net5.0-windows\Font\悟空大字库.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Binaries\net5.0-windows\Font\华文行楷.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Gomoku.ico">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gomoku.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Interop.shell32">
+      <HintPath>Binaries\net5.0-windows\Interop.Shell32.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0649: 从未对字段“MediaController.Mp3Player.structMCI.bMut”赋值，字段将一直保持其默认值 false
+dotnet_diagnostic.CS0649.severity = none
